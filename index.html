@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Memory Card Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Landing Page -->
+  <div id="landingPage" class="landing-page">
+    <h1 class="game-title">Memory Card Game</h1>
+    <div class="menu-card">
+      <button id="startBtn">Start Game</button>
+      <select id="themeSelect">
+        <option value="day">Day</option>
+        <option value="night">Night</option>
+        <option value="sunset">Sunset</option>
+        <option value="forest">Forest</option>
+      </select>
+      <select id="levelSelect">
+        <option value="1">Level 1 - Easy (8 cards)</option>
+        <option value="2">Level 2 - Medium (12 cards)</option>
+        <option value="3">Level 3 - Hard (16 cards)</option>
+      </select>
+    </div>
+    <div class="floating-emojis">
+      🍎 🍌 🍇 🍊 🍓 🍉 🍍 🥝
+    </div>
+  </div>
+
+  <!-- Status Bar -->
+  <div class="status-bar hidden" id="statusBar">
+    <span id="level">Level: 1</span>
+    <span id="timer">Time: 60s</span>
+    <span id="moves">Moves: 20</span>
+    <button id="restartBtn">Restart</button>
+  </div>
+
+  <!-- Game Board -->
+  <div class="game-board hidden" id="gameBoard"></div>
+
+  <!-- AI Twist Popup -->
+  <div id="aiPopup" class="ai-popup hidden"></div>
+
+  <!-- Sounds -->
+  <audio id="flipSound" src="sounds/flip.mp3" preload="auto"></audio>
+  <audio id="matchSound" src="sounds/match.mp3" preload="auto"></audio>
+  <audio id="wrongSound" src="sounds/wrong.mp3" preload="auto"></audio>
+  <audio id="winSound" src="sounds/win.mp3" preload="auto"></audio>
+  <audio id="loseSound" src="sounds/lose.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
